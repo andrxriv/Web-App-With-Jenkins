@@ -55,7 +55,6 @@ pipeline {
             steps {
                 sh "echo 'Beginning E2E stage'"
                 sh '''
-                    npm ci
                     npm install -g serve
                     serve -s build &
                     sleep 10
