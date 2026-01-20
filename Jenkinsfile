@@ -23,8 +23,8 @@ pipeline {
                     npm --version
                     npm ci
                     npm run build
-                    stash name: 'build', includes: 'build/**'
                 '''
+                stash name: 'build', includes: 'build/**'
             }
         }
 
