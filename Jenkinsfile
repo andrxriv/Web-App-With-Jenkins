@@ -24,7 +24,6 @@ pipeline {
                     npm ci
                     npm run build
                 '''
-                stash name: 'build', includes: 'build/**'
             }
         }
 
@@ -81,7 +80,6 @@ pipeline {
                 }
             }
             steps {
-                unstash 'build'
                 sh '''
                     npm install -g netlify-cli
                     echo "Deploying to production. Site ID: $NETLIFY_SITE_ID"
